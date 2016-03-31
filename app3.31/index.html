@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+</head>
+<body>
+	<!--<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title">标题</h1>
+	</header>-->
+	<!-- mh -->
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">标题</h1>
+	</header>
+	<!-- mbody -->
+	<div class="mui-content">
+		<!-- mbutton -->
+	    <button type="button" class="mui-btn mui-btn-blue" id="mybutton">按钮</button>
+	</div>
+	
+	 <script src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+      	mui.init();
+    	</script>
+    	<script>
+    		function test1(){
+    			alert("sdfsdf");
+    		}
+    		function test2(){
+    			alert("word");
+    		}
+    		//1.按钮绑定
+    		var oinput = document.getElementById("mybutton");
+    		//test1()  不能调用  只会执行第二个
+    		oinput.onclick = test1;
+    		oinput.onclick = test2;
+//  		oinput.onclick = function (){
+//  			test1("hah")	;
+//  		};
+//  		alert(oinput.onclick);
+		//2.   会两个都执行一次 tap  触摸
+		oinput.addEventListener("click",test1,false);
+		oinput.addEventListener("click",test2,false);
+		
+    	</script>
+</body>
+</html>

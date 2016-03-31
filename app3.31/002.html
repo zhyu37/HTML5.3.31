@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function studnet(name,age){
+				//如果 没有new  代表window对象  有就代表studnet
+				this.name = name;
+				this.age = age;
+			}
+			//原型法 拓展方法
+			studnet.prototype.sayName = function (){
+				alert(this.name);	
+			};
+			
+		 	var ostu = new studnet("haha",20);
+		 	ostu.sayName();
+		 	
+		 	
+		 	//数组
+		 	var myArray = [];
+		 	//对象
+		 	var myObject = {};
+		 	//多人协作  包名 
+//		 	neusoft.html5.pingpang
+			//类和方法的区别  有没有this
+			var neusoft = {};
+			//属性
+			neusoft.html5 = {};
+			//类
+			neusoft.html5.pingpang = function (version){
+				this.version = version;	
+			};
+			//方法
+			neusoft.html5.pingpang.play = function (){
+				
+			};
+			
+			var op = new neusoft.html5.pingpang("1.0");
+		</script>
+	</body>
+</html>

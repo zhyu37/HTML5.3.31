@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var dataString='{"teachers":[{"name":"黄波","course":"网页高级设计"},{"name":"贺敏","course":"Java程序设计"},{"name":"毛丽娟","course":"JavaScript程序设计"}],"students":[{"name":"张三","age":20},{"name":"李四","age":21},{"name":"王五","age":19}]}';
+			var ostu1 = JSON.parse(dataString);
+			var stu2 = ostu1.students;
+			var stu4 = stu2[2];
+			
+			alert(stu4.name);
+			alert(stu4.age);
+		</script>
+	</body>
+</html>

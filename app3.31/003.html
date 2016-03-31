@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var stu = {"name":"huangbo","age":12};
+			alert(stu.name);
+			alert(stu.age);
+			
+			var stus = [{"name":"huangbo","age":12},
+						{"name":"huangbo2","age":123},
+						{"name":"huangbo3","age":124}];
+						
+			alert(stus[1].age);
+			
+			//字符串  还原成 对象   反序列化
+			var stu = "{"name":"huangbo","age":12}";
+			var ostu = JSON.parse(stu);
+			
+			//序列化
+			var stuString = JSON.stringify(ostu);
+			
+			
+			
+			
+			var dataString='{"teachers":[{"name":"黄波","course":"网页高级设计"},{"name":"贺敏","course":"Java程序设计"},{"name":"毛丽娟","course":"JavaScript程序设计"}],"students":[{"name":"张三","age":20},{"name":"李四","age":21},{"name":"王五","age":19}]}';
+			var ostu1 = JSON.parse(dataString);
+			alert(ostu1.name);
+			alert(stu1.age);
+			
+		</script>
+	</body>
+</html>

@@ -11,8 +11,25 @@
 			var stu2 = ostu1.students;
 			var stu4 = stu2[2];
 			
-			alert(stu4.name);
-			alert(stu4.age);
+			var Object1;
+			for (Object1 in ostu1) {
+				console.log(Object1);
+				for(var i=0;i<Object1.length;i++){
+					
+					var tea = Object1[i];
+				console.log(tea.name);
+				}
+			}
+			
+			ostu1.forEach(function(ts){
+				
+			});
+		
+			
+			
+			
+//			alert(stu4.name);
+//			alert(stu4.age);
 		</script>
 	</body>
 </html>

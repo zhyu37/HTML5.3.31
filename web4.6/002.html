@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#mydiv
+			{
+				width: 20px;
+				height: 30px;
+				/*background-color: blue;*/
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div id="mydiv">
+			
+		</div>
+		
+		<script>
+			//等效于 在div 上直接写
+			var odiv = document.getElementById("mydiv");
+			//属于 强行修改
+			//等效于 在div 中直接写
+			odiv.style.backgroundColor = "royalblue";
+		</script>
+	</body>
+</html>

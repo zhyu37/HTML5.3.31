@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="myUl">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<input type="button" value="上拉刷新" id="top1"/>
+		<input type="button" value="下拉刷新" id="down1"/>
+		
+		<script>
+		//刷新列表属性
+		//初始化 列表最小值
+			var minList = 1;
+		//初始化 列表最大值
+			var maxList = 4;
+		//刷新列表 新增长度
+			var listLength = 4;
+			
+			var topBtn = document.getElementById("top1");
+			var downBtn = document.getElementById("down1");
+			var myUl = document.getElementById("myUl");
+			
+			//上拉刷新
+			topBtn.addEventListener("click",function (){
+				var j = minList;
+				for(var i=0;i<listLength;i++){
+					j--;
+					var oli = document.createElement("li");
+					var oText = document.createTextNode(j);
+					oli.appendChild(oText);
+					var myUl1 = document.querySelector("#myUl");
+				myUl.insertBefore(oli,myUl1.firstChild);
+				}
+				minList = j;
+			});
+			//下拉刷新
+			downBtn.addEventListener("click",function (){
+				var j = maxList;
+				for(var i=0;i<listLength;i++){
+					j++;
+					var oli = document.createElement("li");
+					var oText = document.createTextNode(j);
+					oli.appendChild(oText);
+					myUl.appendChild(oli);
+				}
+				maxList = j;
+			});
+		</script>
+	</body>
+</html>

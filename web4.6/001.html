@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#mydiv
+			{
+				width: 20px;
+				height: 30px;
+				/*background-color: blue;*/
+			}
+			/*只能设计成class选择器*/
+			.forback
+			{
+				background-color: blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="mydiv">
+			
+		</div>
+		
+		<script>
+			//等效于 在div 上直接写
+			var odiv = document.getElementById("mydiv");
+			odiv.className = "forback";
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body style="background-image:url(img/water.jpg)">
+    <h1 style="text-align:center">Virtual Fish Tank</h1>
+    <p style="text-align:center">
+      Welcome to the virtual fish tank, where you never have to worry about
+      remembering to feed the fish.
+     <img src="img/fish.gif" alt="Fish" id="fish" style="position:absolute; top:70px; left: 900px;" />
+    </p>
+    	
+    <script>
+    var fish = document.getElementById("fish");
+    
+    var maxLeft = 900;
+    var fishLeft = maxLeft;
+    var fishTop = 70;
+    var topValue = 10;
+    		function swim(fishL,fishT){
+    			
+    			fish.style.left = fishL+"px";
+    			fish.style.top = fishT+"px";
+    		}
+    
+    		setInterval(function(){
+    			topValue = -topValue;
+    			 fishLeft -= 20;
+    			 var top = fishTop + topValue;
+    			 if(fishLeft<0){
+    			 	fishLeft = maxLeft;
+    			 }
+    			 swim(fishLeft,top);
+    			 
+    		},200);
+    </script>
+  </body>
+
+</html>

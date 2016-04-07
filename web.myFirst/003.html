@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function Add (a,b) {
+				//a有值 b有值
+				if (a&&b) {
+					return a+b;
+				}
+				
+			}
+			
+			var c = Add(2,3);
+			//NAN非数字
+			var d = Add(2);
+			var e = Add(2,3,4);
+			//匿名 函数  一般是 只用一次
+			function (a,b) {
+				if (a&&b) {
+					return a+b;
+				}
+			}
+			(2,4);
+		</script>
+		<input type="button" name="mybutton" id="mybutton" value="测试一下" />
+		<script>
+		//查找控件
+			var opinut = document.getElementById("mybutton");
+			//支持 css3选择器
+			var odiv = document.querySelector("div input");//div first
+			//同上
+			document.querySelectorAll();
+		</script>
+	</body>
+</html>

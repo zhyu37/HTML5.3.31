@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="myDiv">
+			<p id="p1">hello world</p>
+			<p>haha</p>
+		</div>
+	
+		<script>
+			var sid = setInterval();
+			clearInterval(sid);
+//			clearTimeout()
+
+			var odiv = document.getElementById("myDiv");
+			// ?
+//			alert(odiv.childNodes[1].childNodes[0].nodeValue);
+			//删除
+			var op1 = document.getElementById("p1");
+//			odiv.removeChild(op1);
+			
+			//替换
+			var div1 = document.createElement("div");
+			div1.innerHTML = "haha2132";
+			div1.setAttribute("id","p2");
+			
+			odiv.replaceChild(div1,op1);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="mydiv">
+			<p>老谭 haha </p>
+			
+		</div>
+		
+		<script>
+		//用于 上下拉刷新
+			var odiv = document.getElementById("mydiv");
+//			alert(odiv.innerHTML);
+//			odiv.innerHTML = "<input type='text'/>";
+			
+			//控制标签的生成
+			//appendChild始终加在元素底部
+			var op = document.createElement("p");
+			var ospan = document.createTextNode("hahahah");
+			op.appendChild(ospan);
+//			odiv.appendChild(op);
+			
+			var mydiv1 = document.querySelector("#mydiv");
+			odiv.insertBefore(op,mydiv1.firstChild);
+		</script>
+	</body>
+</html>

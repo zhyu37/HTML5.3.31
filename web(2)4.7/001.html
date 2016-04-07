@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="mydiv">
+			
+		</div>
+		<p class="myP"></p>
+		<input type="button" value="test" id="myBtn"/>
+		
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js" >
+			
+		</script>
+		<script>
+			$(function(){
+//				alert('hellp');
+//				document.getElementById("myBtn".onclick) = function(){};
+				$("#myBtn").click(function(){});
+				
+				$("#myBtn").bind("click",function(){});
+				$("#myBtn").bind({
+					"click":function(){},
+					"mouseover":function(){}
+				});
+				$("#myBtn").unbind("click");
+			});
+		</script>
+	</body>
+</html>
